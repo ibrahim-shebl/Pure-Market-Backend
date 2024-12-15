@@ -131,6 +131,17 @@ namespace test.Controllers
             }
         }
 
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout([FromBody] LogoutDto logoutDto)
+        {
+            var token = logoutDto.Token; // التوكن يتم إرساله من جهة العميل
+            var response = await _authService.LogoutAsync(token);
+
+            if (!response.IsSucceed)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
 
 
 

@@ -302,6 +302,29 @@ namespace test.Core.Services
 
             return true;  
         }
+        public async Task<AuthServiceResponseDto> LogoutAsync(string token)
+        {
+            // تحقق من أن التوكن ليس فارغًا
+            if (string.IsNullOrEmpty(token))
+            {
+                return new AuthServiceResponseDto
+                {
+                    IsSucceed = false,
+                    Message = "Token is required"
+                };
+            }
+
+            // يمكنك حفظ التوكن في قائمة سوداء (Blacklist) لتجنب استخدامه مجددًا
+            // هنا يمكنك استخدام تخزين مثل Redis أو قاعدة بيانات
+            // await _cacheService.AddToBlacklistAsync(token);
+
+            // الرد الناجح
+            return new AuthServiceResponseDto
+            {
+                IsSucceed = true,
+                Message = "Logged out successfully"
+            };
+        }
 
     }
 }

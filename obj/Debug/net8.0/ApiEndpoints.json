@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "test.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoutDto",
+        "Type": "test.Core.Dtos.LogoutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "test.Controllers.AuthController",
     "Method": "MakeAdmin",
     "RelativePath": "api/Auth/make-admin",
     "HttpMethod": "POST",

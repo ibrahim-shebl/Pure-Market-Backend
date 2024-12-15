@@ -13,6 +13,7 @@ namespace test.Core.Interfaces
         Task<AuthServiceResponseDto> GetUserInfoAsync(ClaimsPrincipal userClaims);
         Task<IEnumerable<UserInfoDto>> GetAllUsersAsync();
         Task<bool> DeleteUserByIdAsync(string id);
+        Task<AuthServiceResponseDto> LogoutAsync(string token);
     }
 
 }

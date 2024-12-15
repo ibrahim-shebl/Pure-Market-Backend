@@ -149,3 +149,4 @@ D:\MVC\API\test\test\bin\Debug\net8.0\AutoMapper.dll
 D:\MVC\API\test\test\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\MVC\API\test\test\bin\Debug\net8.0\test.staticwebassets.runtime.json
 D:\MVC\API\test\test\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\MVC\API\test\test\obj\Debug\net8.0\test.sourcelink.json
