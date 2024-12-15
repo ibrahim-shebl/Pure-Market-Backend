@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (10)_0dac49e5-1b64-4b14-a941-e1020b3913e5.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (10)_0dac49e5-1b64-4b14-a941-e1020b3913e5.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (11)_027620d1-0b82-49db-895c-642f2b4ceb66.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (11)_027620d1-0b82-49db-895c-642f2b4ceb66.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (11)_d2dbadfb-4bbc-432e-a4ef-198467811cf3.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (11)_d2dbadfb-4bbc-432e-a4ef-198467811cf3.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (12)_5d755bd0-8322-48d2-9159-b347b4a3c648.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (12)_5d755bd0-8322-48d2-9159-b347b4a3c648.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (12)_cf39bd61-0dfb-48d3-899b-920281bb33ef.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (12)_cf39bd61-0dfb-48d3-899b-920281bb33ef.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (14)_f9aa8c02-3a9c-40a1-844e-82f5da5c7c6b.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (14)_f9aa8c02-3a9c-40a1-844e-82f5da5c7c6b.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (9)_15ad1c18-5a2f-4ad8-b0c9-de6d1b8096fa.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (9)_15ad1c18-5a2f-4ad8-b0c9-de6d1b8096fa.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (9)_4372f299-cfd7-4ab8-9606-bf2bab483111.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (9)_4372f299-cfd7-4ab8-9606-bf2bab483111.webp"
+    },
+    {
+      "Id": "D:\\MVC\\API\\test\\test\\wwwroot\\UploadedImages\\1 (9)_8876c753-cd3f-41a4-98dd-d8d75e1ffc0f.webp",
+      "PackagePath": "staticwebassets\\UploadedImages\\1 (9)_8876c753-cd3f-41a4-98dd-d8d75e1ffc0f.webp"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.test.props",
+      "PackagePath": "build\\test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.test.props",
+      "PackagePath": "buildMultiTargeting\\test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.test.props",
+      "PackagePath": "buildTransitive\\test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
