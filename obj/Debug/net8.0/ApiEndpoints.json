@@ -363,9 +363,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "test.DTOs.ContactUsDto",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
