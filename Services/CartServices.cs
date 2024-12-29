@@ -62,8 +62,11 @@ namespace test.Services
             };
         }
 
-        public async Task<CartDto> CreateCartAsync(CreateCartDto createCartDto)
+        public async Task<CartDto> CreateCartAsync(CreateCartDto createCartDto, string accessToken)
         {
+            // تحقق من صحة الـ accessToken إذا لزم الأمر (مثل التحقق من الصلاحية أو المستخدم)
+            // يمكن تنفيذ ذلك عن طريق خدمة مصادقة أو أي منطق آخر.
+
             var cart = new Cart
             {
                 CartItems = new List<CartItem>()
@@ -71,14 +74,13 @@ namespace test.Services
 
             foreach (var item in createCartDto.CartItems)
             {
-                var product = await _context.Products.FindAsync(item.ProductId);  
+                var product = await _context.Products.FindAsync(item.ProductId);
                 if (product != null)
                 {
                     cart.CartItems.Add(new CartItem
                     {
                         ProductId = product.Id,
                         Quantity = item.Quantity,
-                        
                     });
                 }
             }
@@ -94,7 +96,7 @@ namespace test.Services
                     ProductId = ci.ProductId,
                     ProductName = ci.Product?.ProductName ?? "Unknown Product",
                     Quantity = ci.Quantity,
-                    Price = ci.Product?.Price ?? 0  
+                    Price = ci.Product?.Price ?? 0
                 }).ToList()
             };
         }

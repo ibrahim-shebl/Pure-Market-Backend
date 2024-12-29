@@ -9,8 +9,6 @@ namespace test.DTOs
 
         public double Rate { get; set; }
 
-        public IFormFile? CatImg { get; set; }
-
         [MaxLength(2500)]
         public string Description { get; set; }
     }

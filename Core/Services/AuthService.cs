@@ -21,7 +21,7 @@ namespace test.Core.Services
         private readonly JwtSettings _jwtSettings;
         private readonly ApplicationDbContext _context;
 
-        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings , RoleManager<IdentityRole> roleManager, IConfiguration configuration , ApplicationDbContext context)
+        public AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtSettings> jwtSettings, RoleManager<IdentityRole> roleManager, IConfiguration configuration, ApplicationDbContext context)
         {
             _userManager = userManager;
             _roleManager = roleManager;
@@ -123,9 +123,9 @@ namespace test.Core.Services
                 Message = tokenString
             };
         }
-    
 
-    public async Task<AuthServiceResponseDto> MakeOwnerAsync(UpdatePermissionDto updatePermissionDto)
+
+        public async Task<AuthServiceResponseDto> MakeOwnerAsync(UpdatePermissionDto updatePermissionDto)
         {
             var user = await _userManager.FindByNameAsync(updatePermissionDto.Email);
 
@@ -183,7 +183,7 @@ namespace test.Core.Services
 
             await _userManager.AddToRoleAsync(newUser, StaticUserRoles.USER);
 
-             
+
             var authClaims = new List<Claim>
     {
             new Claim(ClaimTypes.Name, newUser.UserName),
@@ -204,7 +204,7 @@ namespace test.Core.Services
             return new AuthServiceResponseDto()
             {
                 IsSucceed = true,
-                Message = token  
+                Message = token
             };
         }
 
@@ -224,7 +224,7 @@ namespace test.Core.Services
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.USER));
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.ADMIN));
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.OWNER));
-          
+
             return new AuthServiceResponseDto()
             {
                 IsSucceed = true,
@@ -276,10 +276,10 @@ namespace test.Core.Services
 
         public async Task<IEnumerable<UserInfoDto>> GetAllUsersAsync()
         {
-            var users = _userManager.Users.ToList();  
+            var users = _userManager.Users.ToList();
             var usersInfo = users.Select(user => new UserInfoDto
             {
-                Id = user.Id,  
+                Id = user.Id,
                 UserName = user.UserName,
                 Email = user.Email
             }).ToList();
@@ -288,19 +288,19 @@ namespace test.Core.Services
         }
         public async Task<bool> DeleteUserByIdAsync(string id)
         {
-            
+
             var user = await _context.Users.FindAsync(id);
 
             if (user == null)
             {
-                return false;  
+                return false;
             }
 
-            
+
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return true;  
+            return true;
         }
         public async Task<AuthServiceResponseDto> LogoutAsync(string token)
         {

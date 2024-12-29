@@ -13,6 +13,5 @@ namespace test.Models
         [MaxLength(2500)]
         public string Description { get; set; }
 
-        public string CatImgPath { get; set; }  
     }
 }

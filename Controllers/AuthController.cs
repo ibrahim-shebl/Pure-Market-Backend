@@ -23,8 +23,7 @@ namespace test.Controllers
         {
             _authService = authService;
         }
-
-        // Route For Seeding my roles to DB
+ 
         [HttpPost]
         [Route("seed-roles")]
         public async Task<IActionResult> SeedRoles()
@@ -35,7 +34,7 @@ namespace test.Controllers
         }
 
 
-        // Route -> Register
+       
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
@@ -49,7 +48,7 @@ namespace test.Controllers
         }
 
 
-        // Route -> Login
+        
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
@@ -61,11 +60,6 @@ namespace test.Controllers
 
             return Unauthorized(loginResult);
         }
-
-
-
-
-        // Route -> make user -> admin
         [HttpPost]
         [Route("make-admin")]
         public async Task<IActionResult> MakeAdmin([FromBody] UpdatePermissionDto updatePermissionDto)
@@ -78,7 +72,7 @@ namespace test.Controllers
             return BadRequest(operationResult);
         }
 
-        // Route -> make user -> owner
+         
         [HttpPost]
         [Route("make-owner")]
         public async Task<IActionResult> MakeOwner([FromBody] UpdatePermissionDto updatePermissionDto)
@@ -94,12 +88,12 @@ namespace test.Controllers
 
         [HttpGet]
         [Route("user-info")]
-        [Authorize(Roles = "ADMIN")] // التأكد من أن الوصول مقتصر على admin فقط
+        [Authorize(Roles = "ADMIN")] 
         public async Task<IActionResult> GetUserInfo()
         {
             try
             {
-                // جلب جميع المستخدمين 
+                 
                 var usersInfo = await _authService.GetAllUsersAsync();
 
                 return Ok(usersInfo);
@@ -113,7 +107,7 @@ namespace test.Controllers
 
         [HttpDelete]
         [Route("delete-user/{id}")]
-        [Authorize(Roles = "ADMIN")] // السماح فقط admin بحذف المستخدمين
+        [Authorize(Roles = "ADMIN")]  
         public async Task<IActionResult> DeleteUser(string id)
         {
             try
@@ -134,7 +128,7 @@ namespace test.Controllers
         [HttpPost("logout")]
         public async Task<IActionResult> Logout([FromBody] LogoutDto logoutDto)
         {
-            var token = logoutDto.Token; // التوكن يتم إرساله من جهة العميل
+            var token = logoutDto.Token;  
             var response = await _authService.LogoutAsync(token);
 
             if (!response.IsSucceed)

@@ -14,12 +14,12 @@ namespace test.Helpers
             CreateMap<ContactUsDto, Contact>();
             CreateMap<Banner, BannerProductDetailsDto>();
             CreateMap<Review, ReviewsDetailsDto>();
+            CreateMap<ReviewDto, Review>();
             CreateMap<ProductDto, Product>()
                 .ForMember(src => src.CatImgPath, opt => opt.Ignore());
             CreateMap<BannerProductDto, Banner>()
                 .ForMember(src => src.CatImgPath, opt => opt.Ignore());
-            CreateMap<ReviewDto, Review>()
-                .ForMember(src => src.CatImgPath, opt => opt.Ignore());
+             
         }
         
     }

@@ -33,7 +33,7 @@ namespace test.Controllers
        
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm] ContactUsDto dto)
+        public async Task<IActionResult> CreateAsync([FromBody] ContactUsDto dto)
         {
             
             var contact = _mapper.Map<Contact>(dto);

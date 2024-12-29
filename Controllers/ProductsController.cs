@@ -26,7 +26,7 @@ namespace test.Controllers
         {
             _productsService = productsService;
             _mapper = mapper;
-            _imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UploadedImages");
+            _imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",  "UploadedImages");
 
             if (!Directory.Exists(_imageFolderPath))
             {

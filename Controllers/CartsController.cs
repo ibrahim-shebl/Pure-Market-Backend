@@ -40,12 +40,21 @@ namespace test.Controllers
         [HttpPost]
         public async Task<ActionResult<CartDto>> CreateCartAsync(CreateCartDto createCartDto)
         {
+            // استخراج الـ accessToken من الهيدر
+            var accessToken = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+            if (string.IsNullOrEmpty(accessToken))
+            {
+                return Unauthorized("Access token is missing.");
+            }
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var cart = await _cartService.CreateCartAsync(createCartDto);
+            // يمكن تمرير الـ accessToken إلى الخدمة إذا كانت مطلوبة
+            var cart = await _cartService.CreateCartAsync(createCartDto, accessToken);
             if (cart == null || cart.Id == 0)
             {
                 return BadRequest("Unable to create cart.");
